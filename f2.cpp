@@ -2,7 +2,7 @@
 
 
 int itc_min_num(long long number){
-    int a = 99999;
+    int a = 9;
     if(number == 0)
     if(number < 0)
         number *= -1;
@@ -64,16 +64,16 @@ int itc_abs(int num) {
 
 
 bool itc_mirror_num(long long number){
+    int a = 0;
     if(itc_len_num(number) == 1)
         return 1;
     if(number % 10 == 0)
         return 0;
-    int a = 0, b = number;
     for(int i = itc_len_num(number) - 1; i >= 0; i--){
         a += number % 10 * itc_pow(10, i);
         number /= 10;
     }
-    if(a == b)
+    if(a == number)
         return true;
     return false;
 }
