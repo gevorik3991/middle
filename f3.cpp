@@ -1,13 +1,17 @@
 #include "middle.h"
 
 
-int itc_mirror_count(long long number){
-    int a = 0;
-    for(int i = 1; i <= number; i++){
-        if(itc_mirror_num(i))
-            a++;
+int itc_mirror_count(long long num)
+{
+    long long i = 1;
+    int r = 0;
+    while(i <= num){
+        if(itc_mirror_num(i) == 1){
+            r ++;
+        }
+        i ++;
     }
-    return a;
+    return r;
 }
 
 
