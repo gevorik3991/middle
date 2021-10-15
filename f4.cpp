@@ -54,8 +54,6 @@ long long itc_covert_num(long long number, int i)
         bin1 = bin1 * 10 + (num2 % i);
         num2 = num2 / i;
     }
-    //if(itc_max_num(bin1) > (i - 1))
-    //    return -1;
     if(colOfNols > 0)
         bin2 = my_rev(bin1) * my_ten_in_step(colOfNols);
     else
@@ -64,4 +62,17 @@ long long itc_covert_num(long long number, int i)
         return bin2;
     }
     return -1;
+}
+
+
+long long my_ten_in_step(long long i){
+    if(i == 0)
+        return 0;
+    long long i2 = 0;
+    long long r = 1;
+    while (i2 < i){
+        r = r * 10;
+        i2 ++;
+    }
+    return r;
 }
