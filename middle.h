@@ -29,5 +29,6 @@ long long itc_multi_num(long long number);
 long long itc_bin_num(long long number);
 long long itc_covert_num(long long number, int i)
 long long my_rev(long long number);
+long long my_ten_in_step(long long i)
 
 #endif // MIDDLE_H_INCLUDED
