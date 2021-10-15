@@ -1,11 +1,11 @@
 #include "middle.h"
 
 
-int itc_mirror_count(long long num)
+int itc_mirror_count(long long number)
 {
     long long i = 1;
     int r = 0;
-    while(i <= num){
+    while(i <= number){
         if(itc_mirror_num(i) == 1){
             r ++;
         }
