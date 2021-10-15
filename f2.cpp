@@ -5,25 +5,23 @@ int itc_min_num(long long number){
     int a = 10;
     if(number == 0)
         return 0;
-    number=itc_abs(number);
+    number = itc_abs(number);
     while(number > 0){
-        if(number % 10 < a)
+        if(number % 10 < a){
             a = number % 10;
-        number /= 10;
+        }
+        number = number / 10;
     }
     return a;
 }
 
 
 int itc_rev_num(long long number){
-    long long a=0;
-    int b=0;
-    number=itc_abs(number);
-    while (number>0){
-        a=a*10+number%10;
-        number/=10;
-    }
-    return itc_len_num(a);
+    int a = 0;
+    number = itc_abs(number);
+    number = my_rev(number);
+    a = itc_len_num(number);
+    return a;
 }
 
 int itc_null_count(long long number){
