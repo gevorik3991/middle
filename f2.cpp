@@ -63,17 +63,26 @@ int itc_abs(int num) {
 }
 
 
-bool itc_mirror_num(long long number){
-    int a = 0;
-    if(itc_len_num(number) == 1)
+bool itc_mirror_num(long long num)
+{
+    long long num2;
+    num = itc_abs(num);
+    num2 = my_rev(num);
+    if(num2 == num)
+    {
         return 1;
-    if(number % 10 == 0)
-        return 0;
-    for(int i = itc_len_num(number) - 1; i >= 0; i--){
-        a += number % 10 * itc_pow(10, i);
-        number /= 10;
     }
-    if(a == number)
-        return true;
-    return false;
+    return 0;
+}
+
+
+long long my_rev(long long num)
+{
+    long long r = 0;
+    while (num > 0)
+    {
+        r = r * 10 + (num % 10);
+        num = num / 10;
+    }
+    return r;
 }
