@@ -55,18 +55,18 @@ double itc_pow (int n, int i)
 }
 
 
-int itc_abs(int num) {
-    if (num < 0) num = -num;
-    return num;
+int itc_abs(int number) {
+    if (number < 0) number = -number;
+    return number;
 }
 
 
-bool itc_mirror_num(long long num)
+bool itc_mirror_num(long long number)
 {
     long long num2;
-    num = itc_abs(num);
-    num2 = my_rev(num);
-    if(num2 == num)
+    number = itc_abs(number);
+    num2 = my_rev(number);
+    if(num2 == number)
     {
         return 1;
     }
@@ -74,13 +74,13 @@ bool itc_mirror_num(long long num)
 }
 
 
-long long my_rev(long long num)
+long long my_rev(long long number)
 {
     long long r = 0;
-    while (num > 0)
+    while (number > 0)
     {
-        r = r * 10 + (num % 10);
-        num = num / 10;
+        r = r * 10 + (number % 10);
+        num = number / 10;
     }
     return r;
 }
