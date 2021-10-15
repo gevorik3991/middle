@@ -28,6 +28,6 @@ bool itc_mirror_num(long long number);
 long long itc_multi_num(long long number);
 long long itc_bin_num(long long number);
 long long itc_oct_num(long long number);
-
+long long my_rev(long long num);
 
 #endif // MIDDLE_H_INCLUDED
