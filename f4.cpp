@@ -1,16 +1,10 @@
 #include "middle.h"
 
 
- int itc_rev_bin_num(long long number){
-     int a = 0;
-    int b = 0;
-    while(number > 0){
-        a += number % 10 * itc_pow(2, b);
-        number /= 10;
-        b++;
-    }
-    return a;
- }
+long long itc_bin_num(long long num)
+{
+    return itc_covert_num(num, 2);
+}
 
 
  int itc_rev_oct_num(long long number){
